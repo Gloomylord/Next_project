@@ -5,23 +5,26 @@ export default function InputPhoneNumber({value, setValue, errorValues, setError
     const [error, setError] = useState(false);
 
     const onChange = useCallback((e) => {
-        const value = e.target.value.replace(/[^0123456789+ ()-]/g, '').trim();
+        const value = e.target.value
+            .replace(/[^0123456789+ ()-]/g, '')
+            .trim()
+            .replace(/\s+|-+|\(+|\)+/g, (str) => str.slice(0, 1));
         setValue(value);
 
-        const re = /^((\+7)|8)[( ]?\d{3}[) -]?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
-        const phone = value.replace(/[^0123456789+]/g, '');
+        const re = /^((\+7)|8) ?((\(\d{3}\) ?)|(\d{3}-?))[ ]?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
         const test = re.test(value);
+        const phone = value.replace(/[^0123456789+]/g, '');
+
         if (!test && defaultValue !== phone) {
             setErrorValues({...errorValues, phoneNumber: true})
             setError(true);
         } else if (defaultValue === phone) {
             setErrorValues({...errorValues, phoneNumber: null});
-            setError(false);
+            setError(!test);
         } else {
             setErrorValues({...errorValues, phoneNumber: false});
             setError(false);
         }
-        console.log(defaultValue, phone)
     }, [value, errorValues, defaultValue]);
 
     return <TextField
