@@ -1,0 +1,60 @@
+.pageLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.noAvatar {
+    background: url("/avatar.svg") no-repeat center;
+    background-size: 100%;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.avatarImg {
+    height: 100%;
+    width: 100%;
+}
+
+.headerLine {
+    width: 1px;
+    height: 39px;
+    background: #fff;
+    margin: 0 20px 0 26px;
+}
+
+.name {
+    margin-right: 23px;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .avatar {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 0;
+        overflow: hidden;
+    }
+    .name {
+        display: none;
+    }
+    .icon {
+        font-size: 22px;
+    }
+    .headerLine {
+        height: 24px;
+        margin: 0 10px 0 16px;
+    }
+}

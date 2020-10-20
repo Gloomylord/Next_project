@@ -1,0 +1,116 @@
+.modal {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 200px;
+    left: 50%;
+    width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 29px 29px 56px 29px;
+}
+
+.completeModal {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 200px;
+    left: 50%;
+    width: 600px;
+    height: 341px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 29px 0;
+}
+
+.iconBox {
+    align-self: flex-end;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: rgba(49, 49, 49, 0.7);
+    margin: 26px 0 32px;
+}
+
+.formButton {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    color: #fff !important;
+    padding: 15px 26px;
+    background: #01BDA7;
+    border-radius: 36px;
+    margin: 18px 0 59px !important;
+}
+
+.formButton * {
+    text-transform: none !important;
+}
+
+@media (max-width: 600px) {
+    .title {
+        margin: 26px 0 40px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .modal {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        transform: none;
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .completeModal > button {
+        display: none;
+    }
+
+    .completeModal h3 {
+        margin: 0;
+    }
+
+    .completeModal {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        padding: 29px;
+        transform: none;
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .formButton label {
+        display: none;
+        margin: 18px 0 59px !important;
+    }
+
+    .formButton {
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        line-height: 19px !important;
+        padding: 15px 26px;
+        background: #01BDA7;
+        border-radius: 36px;
+        margin: 0 0 17px !important;
+    }
+}

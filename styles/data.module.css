@@ -1,0 +1,43 @@
+.list {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    color: #000;
+}
+
+.list li {
+    min-height: 96px;
+    padding: 33px 70px;
+}
+
+.icon {
+    color: #00BFA5;
+    margin-right: 45px;
+    font-size: 30px !important;
+}
+
+.text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #313131;
+}
+
+@media (max-width: 600px) {
+    .list li {
+        min-height: 64px;
+        padding: 22px 12px;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .icon {
+        margin-right: 12px;
+        font-size: 20px !important;
+    }
+}
